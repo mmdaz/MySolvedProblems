@@ -1,0 +1,25 @@
+.rightSideBody {
+    background-color: #343434;
+    width: 20%;
+    float: right;
+    position: absolute;
+    right: 0px;
+    height: 100%; 
+}
+
+.leftSideBody {
+    background-color: #ffffff;
+    width: 70%;
+    float: left;
+    position: absolute;
+    left: 5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.cardContents {
+    background-color:  #229762;
+}
