@@ -86,6 +86,16 @@
                             <br>git push origin master
                         </p>
                 </div>
+                <div class="w3-card cardContents w3-margin w3-container">
+                    <h3>How to work with an external JSON is JavaScript</h3>
+                    <p>
+                        Just this solution helped me:
+                        <br>fs = require('fs');
+                        <br>Read JSON: var setting = JSON.parse(fs.readFileSync(__dirname + '/setting.json'));
+                        <br>Work with your JSON like: setting.language = "english";
+                        <br>Write your new JSON: fs.writeFile(__dirname + '/setting.json', JSON.stringify(setting));
+                    </p>
+            </div>
             </div>
         </div>
 
