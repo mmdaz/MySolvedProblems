@@ -26,3 +26,6 @@
 .contentHeader {
     background-color:  #10462e;
 }
+.contentHeader:hover {
+    background-color:  #229762;
+}
