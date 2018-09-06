@@ -20,7 +20,7 @@
                         <p>
                             Prereq:
                                 <br><code>install zsh
-                                <br><code>apt-get install git-core</code>
+                                <br>apt-get install git-core</code>
                             <br><br>Getting zsh to work in ubuntu is weird, since sh does not understand the source command. So, you do this to install zsh
                                 <br><code>wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh</code>
                             <br><br>and then you change your shell to zsh
@@ -48,32 +48,32 @@
                             I have an Asus laptop and when I wanted to shutdown or reboot, It suddenly got freezed.
                             <br>I found out that it is because of my Nvidia driver that isn't installed on Linux, and these are my solution to fix it:
                             <br><br>Step 1: Check What Graphics Card You’ve Got:
-                            <br>lspci -k | grep -A 2 -i "VGA"
+                            <br><code>lspci -k | grep -A 2 -i "VGA"</code>
                             <br><br>Step 2: Check What Graphics Card You Laptop is Using
                             <br>system settings > details
                             <br><br>Step 3: Install Nvidia Graphics Card Driver
-                            <br>software-properties-gtk
+                            <br><code>software-properties-gtk</code>
                             <br>This will open up the software & updates window. Click the Additional Drivers tab. You can see what driver is being used for Nvidia card (Nouveau by default) and a list of proprietary drivers.
-                            <br>sudo ubuntu-drivers devices
+                            <br><code>sudo ubuntu-drivers devices</code>
                             <br>As you can see, nvidia-"a number" is recommended for my Nvidia card, so I enter this command to install it.
-                            <br>sudo apt-get install nvidia-"a number"
+                            <br><code>sudo apt-get install nvidia-"a number"</code>
                             <br>After the proprietary driver is installed, re-open software & updates window, you should see that the newly installed driver is being used for Nvidia card. If it’s not being used, select it and click the Apply Changes button at the bottom-right corner.
                             <br><br>Step 4: Switch to Nvidia Graphics Card
                             <br>Once rebooted, open Nvidia X Server Settings from Unity Dash. Alternatively, you can issue this command to open it.
-                            <br>nvidia-settings
+                            <br><code>nvidia-settings</code>
                             <br>Click PRIME Profiles tab on the left pane, and then select Nvidia card on the right pane. If you don’t have PRIME Profiles, reboot your computer so PRIME can be enabled.
                             <br>Now go to System Settings > Details, you will see the Nvidia Graphics card.
                             <br><br>To switch back to Intel graphics, simply select Intel in PRIME Profiles. You can also use terminal commands to switch graphics card. For example, this command will switch to Intel graphics card.
-                            <br>sudo prime-select intel
+                            <br><code>sudo prime-select intel</code>
                             <br><br>To switch to Nvidia card:
-                            <br>sudo prime-select nvidia
+                            <br><code>sudo prime-select nvidia</code>
                             <br><br>To check which card is being used right now, run this command:
-                            <br>prime-select query
+                            <br><code>prime-select query</code>
                             <br><br>How to Uninstall Nvidia Drivers
                             <br>Sometimes Nvidia drivers can fail and you get a blank desktop with no panel or launcher. Sometimes you may encounter the following error:
                             <br>driver ebridge is already registered aborting
                             <br>In these cases, you would want to uninstall Nvidia drivers completely which is quite simple to do. Just run the following command to remove all packages that start with nvidia in the package name.
-                            <br>sudo apt purge nvidia-*
+                            <br><code>sudo apt purge nvidia-*</code>
                         </p>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                     <div id="content3" class="w3-container w3-hide">
                         <p>
                             when you want to create Browserwindow in the main.js for electron, add an icon parameter to it.
-                            <br>like this: win = new BrowserWindow({width: 800, height: 600, icon: __dirname + '/assets/image/icon.png'});
+                            <br>like this: <code>win = new BrowserWindow({width: 800, height: 600, icon: __dirname + '/assets/image/icon.png'});</code>
                         </p>
                     </div>
                 </div>
@@ -90,9 +90,9 @@
                     <h3 class="contentHeader w3-container w3-padding">How to delete a directory from the repository</h3>
                     <div id="conten4" class="w3-container w3-hide">
                         <p>
-                            git rm -r --cached node_modules
+                            <code>git rm -r --cached node_modules
                             <br>git commit -m 'Remove the now ignored directory node_modules'
-                            <br>git push origin master
+                            <br>git push origin master</code>
                         </p>
                     </div>
                 </div>
@@ -101,10 +101,10 @@
                     <div id="content5" class="w3-container w3-hide">
                         <p>
                             Just this solution helped me:
-                            <br>fs = require('fs');
-                            <br>Read JSON: var setting = JSON.parse(fs.readFileSync(__dirname + '/setting.json'));
-                            <br>Work with your JSON like: setting.language = "english";
-                            <br>Write your new JSON: fs.writeFile(__dirname + '/setting.json', JSON.stringify(setting));
+                            <br><code>fs = require('fs');</code>
+                            <br>Read JSON: <code>var setting = JSON.parse(fs.readFileSync(__dirname + '/setting.json'));</code>
+                            <br>Work with your JSON like: <code>setting.language = "english";</code>
+                            <br>Write your new JSON: <code>fs.writeFile(__dirname + '/setting.json', JSON.stringify(setting));</code>
                         </p>
                     </div>
                 </div>
